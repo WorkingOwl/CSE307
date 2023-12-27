@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Problem 4</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        p {
+            text-align: center;
+        }
+
+        #close {
+            position: absolute;
+            color: white;
+            font-size: 30px;
+        }
+
+        #modal {
+            display: none;
+            position: relative;
+            text-align: center;
+            top: 50px;
+        }
+
+        #modal-content {
+            height: 300px;
+        }
+
+        #picture {
+            text-align: center;
+            position: relative;
+            top: 30px;
+        }
+
+        #picture img {
+            width: 70px;
+            height: 100px;
+            transition: transform 0.3s;
+        }
+
+        #picture img:hover {
+            transform: scale(1.5);
+        }
+    </style>
+    <script>
+        function openModal(str) {
+            document.getElementById("modal-content").src = str;
+            document.getElementById("modal").style.display = "block";
+        }
+
+        function closeModal(str) {
+            document.getElementById("modal-content").src = "#";
+            document.getElementById("modal").style.display = "none";
+        }
+    </script>
+</head>
+
+<body>
+    <p><b>Tabbed Image Gallery</b></p>
+    <p>Click on the images below:</p>
+    <div id="picture">
+        <img src="https://m.media-amazon.com/images/I/71Hrhjzok-L._AC_UF1000,1000_QL80_.jpg"
+            onclick="openModal('https://m.media-amazon.com/images/I/71Hrhjzok-L._AC_UF1000,1000_QL80_.jpg')">
+        <img src="https://m.media-amazon.com/images/I/91jlaF6sD0L._AC_UF1000,1000_QL80_.jpg"
+            onclick="openModal('https://m.media-amazon.com/images/I/91jlaF6sD0L._AC_UF1000,1000_QL80_.jpg')">
+        <img src="https://m.media-amazon.com/images/I/61OMltAHfYL._AC_UF1000,1000_QL80_.jpg"
+            onclick="openModal('https://m.media-amazon.com/images/I/61OMltAHfYL._AC_UF1000,1000_QL80_.jpg')">
+        <img src="https://m.media-amazon.com/images/I/51qvaoaPYSL.jpg"
+            onclick="openModal('https://m.media-amazon.com/images/I/51qvaoaPYSL.jpg')">
+    </div>
+    <div id="modal">
+        <span id="close" onclick="closeModal()">&times;</span>
+        <img id="modal-content" src="#">
+    </div>
+
+</body>
+
+</html>

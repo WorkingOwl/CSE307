@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Problem 3</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function changeAppearance() {
+            const paragraphElements = document.querySelectorAll("p.example");
+            paragraphElements[0].style.backgroundColor = "yellow";
+            paragraphElements[0].style.border = "2px solid green";
+            paragraphElements[1].style.border = "2px solid green";
+            const attributeElements = document.querySelectorAll("a");
+            for (let attributeElement of attributeElements) {
+                attributeElement.style.border = "2px solid red";
+                attributeElement.style.textDecoration = "none";
+            }
+            const headerElements = document.querySelectorAll(".title");
+            for (let headerElement of headerElements) {
+                headerElement.style.color = "orange";
+            }
+
+        }
+    </script>
+</head>
+
+<body onload="replaceHref()">
+    <p class="example"
+        style="color: black; font-size: large; background-color: skyblue;height: 40px; vertical-align: middle;display: table-cell; padding: 10px; border: 2px solid black">
+        This is the first paragraph with class "example".</p>
+    </br>
+    <p class="example"
+        style="color: black; font-size: large; background-color: skyblue;height: 40px; vertical-align: middle;display: table-cell; padding: 10px; border: 2px solid black">
+        Another paragraph with class "example".</p>
+    <a href="#">Link with target attribute</a>
+    </br>
+    <a href="#">Another link with target attribute</a>
+    </br>
+    <h1 class="title" style="color: purple">Title 1</h1>
+    <h2 class="title" style="color: purple">Title 2</h2>
+    <button type="button" onclick="changeAppearance()">Change</button>
+</body>
+
+</html>

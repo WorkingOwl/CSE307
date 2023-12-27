@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Problem 6
+    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= device-width, initial-scale = 1.0">
+    <script>
+        function printResult() {
+            const number = Number(document.getElementById("number").value);
+            if (Number.isInteger(number) && number > 0 && number <= 2 ^ 31 - 1) {
+                let result = "";
+                let flag = true;
+                if (number == 1) {
+                    flag = false;
+                } else {
+                    for (let i = 2, s = Math.sqrt(number); i <= s; i++) {
+                        if (number % i === 0) {
+                            flag = false;
+                            break;
+                        }
+                    }
+                }
+                result = String(flag);
+                document.getElementById("result").innerHTML = result;
+            } else {
+                let result = "Please enter a valid positive integer number.";
+                document.getElementById("result").innerHTML = result;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Numbers from 1 to N</h1>
+    <label for="number">Enter a positive integer N:</label>
+    <input type="text" id="number">
+    <button type="button" onclick="printResult()">Check Prime</button>
+    <p id="result"></p>
+</body>
+
+</html>

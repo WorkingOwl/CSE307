@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Problem 2</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function display(str, id) {
+            var result = `
+            <td>${str}</td>
+            <td>${parseInt(str)}</td>
+            <td>${parseFloat(str)}</td>
+            <td>${Number(str)}</td>
+            <td>${+str}</td>
+            <td>${str | 0}</td>`
+            document.getElementById(id).innerHTML = result;
+        }
+    </script>
+</head>
+
+<body
+    onload="display('1234','firstResult'),display('1234abc','secondResult'), display('0.15','thirdResult'),display('3.14ivan','fourthResult'),display('Infinity','fifthResult'),display('99999999999999999999','sixthResult')">
+    <table border="1" style="border-collapse: collapse;">
+        <tr>
+            <td>str</td>
+            <td>parseInt(str)</td>
+            <td>parseFloat(str)</td>
+            <td>Number(str)</td>
+            <td>+str</td>
+            <td>str | 0</td>
+        </tr>
+        <tr id="firstResult">
+        </tr>
+        <tr id="secondResult">
+        </tr>
+        <tr id="thirdResult">
+        </tr>
+        <tr id="fourthResult">
+        </tr>
+        <tr id="fifthResult">
+        </tr>
+        <tr id = "sixthResult">
+        </tr>
+    </table>
+</body>
+
+</html>

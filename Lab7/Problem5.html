@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Problem 5</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container {
+            display: grid;
+            row-gap: 30px;
+
+        }
+
+        .row {
+            display: table-row;
+            border: 1px solid black;
+            height: 50px;
+
+        }
+
+        .cell {
+            display: table-cell;
+            border: 1px solid black;
+            height: 50px;
+            vertical-align: middle;
+        }
+
+        .cell:first-child {
+            padding-left: 20px;
+            width: 1500px;
+        }
+
+        .cell:last-child {
+            text-align: center;
+            width: 50px;
+        }
+
+        #danger {
+            background-color: red;
+        }
+
+        #success {
+            background-color: rgb(45, 253, 45);
+        }
+
+        #info {
+            background-color: rgb(98, 223, 254);
+        }
+
+        #warning {
+            background-color: orange;
+        }
+    </style>
+    <script>
+        setTimeout(function () { closeRow("danger"); }, 5000);
+        setTimeout(function () { closeRow("success"); }, 5000);
+        setTimeout(function () { closeRow("info"); }, 5000);
+        setTimeout(function () { closeRow("warning"); }, 5000);
+        function closeRow(id) {
+            document.getElementById(id).style.display = "none";
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Alert message</h1>
+    <p>Click on the "x" symbol to close the message</p>
+    <div class="container">
+        <div class="row" id="danger">
+            <p class="cell"><b>Danger!</b> Indicates a dangerous or potentially negative
+                action.</p>
+            <span class="cell" onclick="closeRow('danger')">&times;</span>
+        </div>
+        <div class="row" id="success">
+            <p class="cell"><b>Success!</b> Indicates a successful or positive action.
+            </p>
+            <span class="cell" onclick="closeRow('success')">&times;</span>
+        </div>
+        <div class="row" id="info">
+            <p class="cell"><b>Info!</b> Indicates a neutral informative change or action.
+            </p>
+            <span class="cell" onclick="closeRow('info')">&times;</span>
+        </div>
+        <div class="row" id="warning">
+            <p class="cell"><b>Warning!</b> Indicates a warning that might need attention.</p>
+            <span class="cell" onclick="closeRow('warning')">&times;</span>
+        </div>
+    </div>
+</body>
+
+</html>

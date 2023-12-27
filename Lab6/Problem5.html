@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Problem 5
+    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= device-width, initial-scale = 1.0">
+    <script>
+        function printResult() {
+            const number = Number(document.getElementById("number").value);
+            if (Number.isInteger(number) && number > 0 && number <= 2^31 - 1) {
+                let result = "";
+                for (i = 1; i <= number; i++) {
+                    result += i + " ";
+                }
+                document.getElementById("result").innerHTML = result;
+            } else {
+                let result = "Please enter a valid positive integer number.";
+                document.getElementById("result").innerHTML = result;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Numbers from 1 to N</h1>
+    <label for="number">Enter a positive integer N:</label>
+    <input type="text" id="number">
+    <button type="button" onclick="printResult()">Print Numbers</button>
+    <p id="result"></p>
+</body>
+
+</html>

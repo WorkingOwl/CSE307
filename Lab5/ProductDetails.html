@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        ABC Bookstore
+    </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./Style.css">
+</head>
+
+<body>
+    <header>
+        <div class="hLeft">
+            <img src="./img_Practice3/img_Practice3/logoABCbook.png" width="300px" height="150px">
+        </div>
+        <div class="hRight">
+            <i class="fa fa-user-circle-o" aria-hidden="true"><a href="./Login.html">Log in</a></i>
+            <a href="./Register.html">Registration</a>
+            <i class="fa fa-shopping-cart" aria-hidden="true"><a href="#">Cart</a></i>
+            </tr>
+        </div>
+    </header>
+    <nav>
+        <div class="search">
+            <input type="text" alt="search" placeholder="Enter the title of the book..." style="height: 30px;">
+            <button type="submit" class="btn btn-success"
+                style="border-top-left-radius: 0px; border-bottom-left-radius: 0px;">Find books</button>
+        </div>
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <a href="./Homepage.html" class="btn btn-success active" aria-current="page"
+                style="border-radius: 20px;"><b>Home Page</b></a>
+            <a href="./Introduction.html" class="btn btn-success" style="border-radius: 20px;"><b>Introduction</b></a>
+            <a href="#" class="btn btn-success" style="border-radius: 20px;"><b>Contact</b></a>
+            <div class="dropdown">
+                <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false" style="border-radius: 20px;">
+                    <b>BOOKS BY SUBJECT</b>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Ngoại ngữ</a></li>
+                    <li><a class="dropdown-item" href="#">Công nghệ thông tin</a></li>
+                    <li><a class="dropdown-item" href="#">Luật</a></li>
+                    <li><a class="dropdown-item" href="#">Văn học</a></li>
+                    <li><a class="dropdown-item" href="#">Khoa học kỹ thuật</a></li>
+                    <li><a class="dropdown-item" href="#">Nông nghiệp</a></li>
+                    <li><a class="dropdown-item" href="#">Lịch sử, địa lý</a></li>
+                    <li><a class="dropdown-item" href="#">Kinh tế</a></li>
+                    <li><a class="dropdown-item" href="#">Nghệ thuật sống</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false" style="border-radius: 20px;">
+                    <b>BOOKS BY PUBLISHER</b>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Nhà xuất bản Trẻ</a></li>
+                    <li><a class="dropdown-item" href="#">NXB thống kê</a></li>
+                    <li><a class="dropdown-item" href="#">Kim đồng</a></li>
+                    <li><a class="dropdown-item" href="#">Đại học quốc gia</a></li>
+                    <li><a class="dropdown-item" href="#">Văn hóa nghệ thuật</a></li>
+                    <li><a class="dropdown-item" href="#">Văn hóa</a></li>
+                    <li><a class="dropdown-item" href="#">Lao động - Xã hội</a></li>
+                    <li><a class="dropdown-item" href="#">Khoa Học & Kỹ Thuật</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div>
+        <article>
+            <aside id="left">
+                <div id="top">
+                    <p><b>SÁCH THEO CHỦ ĐỀ</b></p>
+                    <ul type="square" style="margin-left: 20px;">
+                        <li><a href="#">Ngoại ngữ</a></li>
+                        <li><a href="#">Công nghệ thông tin</a></li>
+                        <li><a href="#">Luật</a></li>
+                        <li><a href="#">Văn học</a></li>
+                        <li><a href="#">Khoa học kỹ thuật</a></li>
+                        <li><a href="#">Nông nghiệp</a></li>
+                        <li><a href="#">Lịch sử, địa lý</a></li>
+                        <li><a href="#">Kinh tế</a></li>
+                        <li><a href="#">Nghệ thuật sống</a></li>
+                    </ul>
+                </div>
+                <div id="bottom">
+                    <p><b>SÁCH THEO NHÀ XUẤT BẢN</b></p>
+                    <ul type="square" style="margin-left: 20px;">
+                        <li><a href="#">Nhà xuất bản Trẻ</a></li>
+                        <li><a href="#">NXB thống kê</a></li>
+                        <li><a href="#">Kim đồng</a></li>
+                        <li><a href="#">Đại học quốc gia</a></li>
+                        <li><a href="#">Văn hóa nghệ thuật</a></li>
+                        <li><a href="#">Văn hóa</a></li>
+                        <li><a href="#">Lao động - Xã hội</a></li>
+                        <li><a href="#">Khoa Học & Kỹ Thuật</a></li>
+                    </ul>
+                </div>
+            </aside>
+            <section>
+                <div id="body">
+                    <table id ="productdetails" border="1" style="width: 100%">
+                        <thead style="text-align: center;">
+                            <th colspan="2" style="font-size: 20px; color: blue;background-color: pink;">GIÁO TRÌNH TIN
+                                HỌC CƠ BẢN</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="6">
+                                    <center><img src="./img_Practice3/img_Practice3/BasicComputer.png" width="100"
+                                            height="200"></a></center>
+                                </td>
+                                <td>Tác giả: <i>Phạm Công Anh</i></td>
+                            </tr>
+                            <tr>
+                                <td>Đồng tác giả: <i>Lê Việt Nhân</i></td>
+                            </tr>
+                            <tr>
+                                <td>Hiệu đính: <i>Hồng Phúc</i></td>
+                            </tr>
+                            <tr>
+                                <td>Chủ biên: <i>Quách Tuấn Ngọc</i></td>
+                            </tr>
+                            <tr>
+                                <td>Nhà xuất bản: <span style="color: red"><b>Nhà xuất bản Trẻ</b></span></td>
+                            </tr>
+                            <tr>
+                                <td>Chủ đề: <span style="color: red"><b>Triết học-Chính trị</b></span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <p class="d-inline-flex gap-1" style = "padding-left: 50px;">
+                                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseExample" aria-expanded="false"
+                                            aria-controls="collapseExample">
+                                            NỘI DUNG CUỐN SÁCH
+                                        </button>
+                                    </p>
+                                    <div class="collapse" id="collapseExample" style = "padding-left: 50px; padding-right: 50px;">
+                                        <div class="card card-body">
+                                            <span>Tin Học Cơ Bản Windows XP gồm có 7 chương:
+                                                Chương 1: Một số vấn đề cơ bản. </br>
+                                                Chương 2: Sử dụng nhanh thanh công cụ và thanh thực đơn trong My
+                                                Computer và Windows Explorer. </br>
+                                                Chương 3: Các thao tác trong Windows XP </br>
+                                                Chương 4: Các thiết lập trong Windows XP </br>
+                                                Chương 5: Bảo trì máy tính. </br>
+                                                Chương 6: Các phím tắt. </br>
+                                                Chương 7: Hỏi và đáp thắc mắc. </br></span>
+                                                
+                                        </div>
+                                    </div>
+                                    <p style = "padding-left: 50px;">Xin trân trọng giới thiệu cuốn sách cùng bạn</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" align="right">Giá bán: <span style="color: red;"><b>26,000 VNĐ/
+                                            Cuốn</b></span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" align="right">
+                                    <img style="width: 20%;" src="https://support.imgroup.vn/upload/images/huong-dan-cach-lay-link-gio-hang-web-builder.png"
+                                        alt="buybutton">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <aside id="right">
+                <div id="roll">
+                    <p class="title"><b>BESTSELLER</b></p>
+                    <marquee direction="up" scrollmount="3" scrolldelay="100" onMouseMove="stop()" onMouseOut="start()"
+                        height="300" width="300">
+                        <p><a href="detailproduct.html"><img
+                                    src="img_Practice3/img_Practice3/EnglishForTech.jpg">English
+                                For Tech</a></p>
+                        <p><a href="detailproduct.html"><img src="img_Practice3/img_Practice3/BARC.png">English For
+                                Tech</a></p>
+                        <p><a href="detailproduct.html"><img src="img_Practice3/img_Practice3/VisualBasic.png">English
+                                For Tech</a></p>
+                    </marquee>
+                </div>
+                <div id="links">
+                    <p class="title"><b>THE WEBSITE LINKS</b></p>
+                    <select name="Page" onchange="location = this.value;">
+                        <option value="selected" selected="selected">--- Select the linking page ---</option>
+                        <option value="http://lib.eiu.edu.vn/">http://lib.eiu.edu.vn/ - Eastern Internationl University
+                        </option>
+                        <option value="http://eiu.edu.vn/">http://eiu.edu.vn/ - Eastern Internationl University</option>
+                    </select>
+                </div>
+                <div id="statistics">
+                    <p class="title"><b>ACCESS STATISTICS</b></p>
+                    <p style="color: red;"><b>Total Access: 500</b></p>
+                    <p style="color: red;"><b>Online: 3</b></p>
+                </div>
+            </aside>
+        </article>
+    </div>
+    <footer>
+        <p>@2016 - ABC Bookstore: Allright Reserved</p>
+        <p>Website is developed to be used as a hands-on experience in Web programming</p>
+        <p>Email: abcbookstore@gmail.com</p>
+    </footer>
+</body>
+
+</html>

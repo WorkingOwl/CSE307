@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <style>
+        .ui-dialog-buttonset button {
+            margin: 5px;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#dialog").dialog({
+                autoOpen: false,
+                modal: true,
+                buttons: {
+                    "Close": function () {
+                        $(this).dialog("close");
+                    },
+                    "Save Changes": function () {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+
+            $("#open-dialog").click(function () {
+                $("#dialog").dialog("open");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="dialog" title="Dialog Title">
+        <p>Please be notified.</p>
+    </div>
+    <button id="open-dialog">Open Dialog</button>
+
+
+</body>
+
+</html>

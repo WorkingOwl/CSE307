@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registration Form</title>
+</head>
+
+<body>
+    <table border="1">
+        <form>
+            <tr>
+                <td>
+                    <center><b>Full name*</b></center>
+                </td>
+                <td>
+                    <input type="text" name="full_name" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <center><b>Email*</b></center>
+                </td>
+                <td>
+                    <input type="email" name="email" required="true">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <center><b>Password*</b></center>
+                </td>
+                <td>
+                    <input type="password" name="password" required="true">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <center><b>Confirm Password*</b></center>
+                </td>
+                <td>
+                    <input type="password" name="password" required="true">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <center><b>Phone Number*</b></center>
+                </td>
+                <td>
+                    <input type="tel" name="phone" pattern="[0][0-9]{9}" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <center><b>Address</b></center>
+                </td>
+                <td>
+                    <textarea name="address" cols="30" rows="5"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <center><b>City</b></center>
+                </td>
+                <td>
+                    <input type="text" name="city" placeholder="Enter your City"> <b>State</b>
+                    <input type="text" name="state" placeholder="Enter your State">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <center><b>Zip/Postal Code</b></center>
+                </td>
+                <td>
+                    <input type="text" name="zip code" placeholder="Enter your Zip/Postal Code">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <center><b>Country</b></center>
+                </td>
+                <td>
+                    <select name="country">
+                        <option value="instruction">[Select your country]</option>
+                        <option value="Vietnam">Vietnam</option>
+                        <option value="USA">USA</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><center><b>Birthday:</b></center></td>
+                <td>
+                    <input type="date" name="birthday">
+                </td>
+            </tr>
+            <tr>
+                <td><center><b>Gender</b></center></td>
+                <td>
+                    <select name="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="USA">USA</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><center><b>Starting date</b></center></td>
+                <td>
+                    <input type="radio" id = "Spring" name="starting date" value="spring">
+                    <label for = "Spring">Spring</label>
+                    <input type="radio" id = "Summer" name="starting date" value="summer">
+                    <label for = "Summer">Summer</label>
+                </td>
+            </tr>
+            <tr>
+                <td><center><b>Comments</b></center></td>
+                <td>
+                    <textarea name="address" cols="30" rows="5"
+                        placeholder="Please send us more information"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <center><button type="submit">Submit</button></center>
+                </td>
+            </tr>
+        </form>
+    </table>
+</body>
+
+</html>

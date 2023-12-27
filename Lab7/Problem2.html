@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Problem 2</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function changeAppearance() {
+            const firstParagraphElement = document.querySelector("p.example");
+            firstParagraphElement.style.backgroundColor = "yellow";
+            firstParagraphElement.style.color = "blue";
+            const firstAttributeElement = document.querySelector("a");
+            firstAttributeElement.style.border = "2px solid red";
+        }
+    </script>
+</head>
+
+<body onload="replaceHref()">
+    <p class = "example"
+        style="color: green; font-size: large; background-color: skyblue;height: 40px; vertical-align: middle;display: table-cell; padding: 10px;">
+        This is the first paragraph with class "example".</p>
+    <p>This is another paragraph.</p>
+    <a href="#">Link with target attribute</a>
+    </br>
+    <button type="button" onclick="changeAppearance()">Change</button>
+</body>
+
+</html>

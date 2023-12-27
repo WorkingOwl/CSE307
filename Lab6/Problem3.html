@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Problem 3
+    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="wdith = device-width, initial-scale = 1.0">
+    <script>
+        var arr = [
+            {
+                title: 'Head First Java, 3rd Edition',
+                image: 'https://vn-test-11.slatic.net/p/9f7789b9ad2dcdf0904a1df09c45bff6.jpg',
+                price: 232685
+            },
+            {
+                title: 'Head First Design Patterns, 2nd Edition',
+                image: 'https://cdn-amz.woka.io/images/I/91quawUTiVL.jpg',
+                price: 131100
+            },
+            {
+                title: 'Head First Software Development, 1st Edition',
+                image: 'https://m.media-amazon.com/images/I/91y6PSOqKKL._AC_UF1000,1000_QL80_.jpg',
+                price: 301100
+            }
+        ];
+        function compare(a, b) {
+            if (b.title > a.title) return 1;
+            if (b.title < a.title) return -1;
+            return 0;
+        }
+        function Show() {
+            arr.sort(compare);
+            var str = '';
+            document.writeln("<table style = 'border: 1px solid black; border-collapse: collapse;'><tr id = 'row' style = 'height: 100px'></tr></table>");
+            for (i = 0; i < arr.length; i++) {
+                str += `
+                <td style = 'text-align: center'>
+                <div>${arr[i].title}</div>
+                <img width = '200px' height ='300px' src='${arr[i].image}'/> 
+                <div>${arr[i].price} VND</div>
+                </td>`;
+            }
+            document.getElementById("row").innerHTML += str;
+        }
+    </script>
+</head>
+
+<body onload="Show()">
+
+</body>
+
+</html>

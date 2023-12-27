@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Problem 4</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale=1.0">
+    <script>
+        var arr = [];
+        function clear() {
+            let textFields = document.querySelectorAll('[type = "text"]');
+            for (let textField of textFields) {
+                document.getElementById(textField.id).value = "";
+            }
+        }
+        function getInfo() {
+            ID = document.getElementById("ID").value;
+            name = document.getElementById("name").value;
+            quantity = document.getElementById("quantity").value;
+            price = document.getElementById("price").value;
+            imageLink = document.getElementById("imageLink").value;
+            return { ID, name, quantity, price, imageLink };
+        }
+        function compare(a, b) {
+            if (a.name > b.name) return -1;
+            if (a.name < b.name) return 1;
+            return 0;
+        }
+        function sortByName() {
+            arr.sort(compare);
+            window.alert("Sorted");
+        }
+        function addToHead() {
+            arr.unshift(getInfo());
+            window.alert("Successful");
+            clear();
+        }
+        function addToTail() {
+            arr.push(getInfo());
+            window.alert("Successful");
+            clear();
+        }
+        function list() {
+            console.log(arr);
+            let str = "";
+            for (i = 0; i < arr.length; i++) {
+                str += `
+                <tr>
+                    <td>${arr[i].ID}</td>
+                    <td>${arr[i].name}</td>
+                    <td>${arr[i].quantity}</td>
+                    <td>${arr[i].price}</td>
+                    <td><img src = '${arr[i].imageLink}'</td>
+                </tr>`;
+            }
+            document.getElementById("table").innerHTML = str;
+        }
+        function search() {
+            let str = "";
+            for (i = 0; i < arr.length; i++) {
+                if (arr[i].name == document.getElementById("search").value) {
+                    str += `
+                <tr>
+                    <td>${arr[i].ID}</td>
+                    <td>${arr[i].name}</td>
+                    <td>${arr[i].quantity}</td>
+                    <td>${arr[i].price}</td>
+                    <td><img src = '${arr[i].imageLink}'</td>
+                </tr>`;
+                }
+            }
+            document.getElementById("table").innerHTML = str;
+        }
+        function deleteById() {
+            if (document.getElementById("delete").value == "") {
+                window.alert("Please enter an ID");
+            } else {
+                let flag = false;
+                for (i = 0; i < arr.length; i++) {
+                    if (arr[i].ID == document.getElementById("delete").value) {
+                        arr.splice(i, 1);
+                        flag = true;
+                        break;
+                    }
+                }
+                let result = flag ? "Deleted" : "No product with this ID is found";
+                window.alert(result);
+            }
+        }
+
+        function editById() {
+            if (document.getElementById("ID").value == "") {
+                window.alert("Please enter an ID");
+            } else {
+                let flag = false;
+                for (i = 0; i < arr.length; i++) {
+                    if (arr[i].ID == document.getElementById("ID").value) {
+                        arr[i].name = !(document.getElementById("name").value == "") ? document.getElementById("name").value : arr[i].name;
+                        arr[i].quantity = !(document.getElementById("quantity").value == "") ? document.getElementById("quantity").value : arr[i].quantity;
+                        arr[i].price = !(document.getElementById("price").value == "") ? document.getElementById("price").value : arr[i].price;
+                        arr[i].imageLink = !(document.getElementById("imageLink").value == "") ? document.getElementById("imageLink").value : arr[i].imageLink;
+                        flag = true;
+                        clear();
+                        break;
+                    }
+                }
+                let result = flag ? "Edited" : "No product with this ID is found";
+                window.alert(result);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <label for="ID">ID: </label>
+    <input type="text" id="ID">
+    </br>
+    <label for="name">Name: </label>
+    <input type="text" id="name">
+    </br>
+    <label for="quantity">Quantity: </label>
+    <input type="text" id="quantity">
+    </br>
+    <label for="price">Price: </label>
+    <input type="text" id="price">
+    </br>
+    <label for="imageLink">Image (link):</label>
+    <input type="text" id="imageLink">
+    </br>
+    <button type="button" onclick="addToHead()">Add to head</button>
+    <button type="button" onclick="addToTail()">Add to tail</button>
+    <button type="button" onclick="editById()">Edit by ID</button>
+    <button type="button" onclick="list()">Print</button>
+    <button type="button" onclick="sortByName()">Sort</button>
+    </br>
+    <label for="search">Search by name:</label>
+    <input type="text" id="search">
+    <button type="button" onclick="search()">Search</button>
+    </br>
+    <label for="delete">Delete by ID:</label>
+    <input type="text" id="delete">
+    <button type="button" onclick="deleteById()">Delete</button>
+    <table id="table">
+    </table>
+
+
+</body>
+
+</html>

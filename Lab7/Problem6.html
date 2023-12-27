@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registration Form</title>
+    <meta charset="UTF-8" ;>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        window.onload = function () {
+            document.getElementById("form").addEventListener("submit", function (event) {
+                let name = document.getElementById("name");
+                let email = document.getElementById("email");
+                let password = document.getElementById("password");
+                let phoneNumber = document.getElementById("phoneNumber");
+                let confirmPassword = document.getElementById("confirmPassword");
+                var validTextField = 0;
+                if (name.value == "") {
+                    validTextField++;
+                    document.getElementById("nameResult").innerHTML = "<span style = 'color:red'><b>Please input your name</b></span>";
+                }
+                if (email.value == "") {
+                    validTextField++;
+                    document.getElementById("emailResult").innerHTML = "<span style = 'color:red'><b>Please input your email</b></span>";
+                }
+                if (password.value.length < 6) {
+                    validTextField++;
+                    document.getElementById("passwordResult").innerHTML = "<span style = 'color:red'><b>Please input your password(min length = 6)</b></span>";
+                }
+                if (confirmPassword.value != password.value) {
+                    validTextField++;
+                    document.getElementById("confirmPasswordResult").innerHTML = "<span style = 'color:red'><b>It does not match your password</b></span>";
+                }
+                if (!/^[0-9]+$/.test(phoneNumber.value)) {
+                    validTextField++;
+                    document.getElementById("phoneNumberResult").innerHTML = "<span style = 'color:red'><b>Phone number not valid</b></span>";
+                }
+                if (validTextField > 0) {
+                    event.preventDefault();
+                }
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <table border="1">
+        <form id="form">
+            <tr>
+                <td>
+                    <center><b>Full name*</b></center>
+                </td>
+                <td>
+                    <input type="text" id="name" name="name" />
+                    <p id="nameResult"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <center><b>Email*</b></center>
+                </td>
+                <td>
+                    <input type="email" id="email" name="email">
+                    <p id="emailResult"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <center><b>Password*</b></center>
+                </td>
+                <td>
+                    <input type="password" id="password" name="password">
+                    <p id="passwordResult"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <center><b>Confirm Password*</b></center>
+                </td>
+                <td>
+                    <input type="password" id="confirmPassword" name="confirmPassword">
+                    <p id="confirmPasswordResult"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <center><b>Phone Number*</b></center>
+                </td>
+                <td>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0][0-9]{9}">
+                    <p id="phoneNumberResult"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <center><b>Address</b></center>
+                </td>
+                <td>
+                    <textarea name="address" cols="30" rows="5"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <center><b>City</b></center>
+                </td>
+                <td>
+                    <input type="text" name="city" placeholder="Enter your City"> <b>State</b>
+                    <input type="text" name="state" placeholder="Enter your State">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <center><b>Zip/Postal Code</b></center>
+                </td>
+                <td>
+                    <input type="text" name="zip code" placeholder="Enter your Zip/Postal Code">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <center><b>Country</b></center>
+                </td>
+                <td>
+                    <select name="country">
+                        <option value="instruction">[Select your country]</option>
+                        <option value="Vietnam">Vietnam</option>
+                        <option value="USA">USA</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <center><b>Birthday:</b></center>
+                </td>
+                <td>
+                    <input type="date" name="birthday">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <center><b>Gender</b></center>
+                </td>
+                <td>
+                    <select name="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="USA">USA</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <center><b>Starting date</b></center>
+                </td>
+                <td>
+                    <input type="radio" id="Spring" name="starting date" value="spring">
+                    <label for="Spring">Spring</label>
+                    <input type="radio" id="Summer" name="starting date" value="summer">
+                    <label for="Summer">Summer</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <center><b>Comments</b></center>
+                </td>
+                <td>
+                    <textarea name="address" cols="30" rows="5"
+                        placeholder="Please send us more information"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <center><button type="submit">Submit</button></center>
+                </td>
+            </tr>
+        </form>
+    </table>
+</body>
+
+</html>
